@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", "Abril Fatface";
+}
+:root {
+  --color-alpha: #ffffff33;
+  --color-beta: rgba(0, 0, 0, 0.4);
+
+  --color-0: #fff;
+  --color-1: #000;
+  --color-2: #765224;
+}
+body {
+  background-image: url("../../public/img/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#game {
+  background-color: var(--color-beta);
+  box-shadow: 0 0 10px var(--color-beta);
+  border-radius: 8px;
+  color: var(--color-0);
+  padding: 20px;
+  max-width: 550px;
+  margin: 2rem auto;
+}
+#game > p {
+  text-align: center;
+}
+h1 {
+  background-color: var(--color-beta);
+  color: var(--color-0);
+  text-align: center;
+  padding: 1rem;
+}
+#victory {
+  color: #008000;
+}
+#draws {
+  color: #ffff00;
+}
+#loss {
+  color: #ff0000;
+}
+#header-game {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#score {
+  background-color: var(--color-beta);
+  color: var(--color-0);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  width: 15rem;
+}
+/* Estilo para as imagens */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.choice-image {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  filter: drop-shadow(5px 5px 10px var(--color-1));
+}
+#computer-choice {
+  transform: scaleX(-1);
+}
+.btn {
+  background-color: var(--color-1);
+  border: 0.3rem solid var(--color-0);
+  border-radius: 0.4rem;
+  color: var(--color-0);
+  opacity: 0.7;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 1;
+  transition: all ease 500ms;
+}
+#result {
+  display: none;
+  background-color: var(--color-2);
+  border-radius: 0.3rem;
+  border: 0.3rem solid var(--color-0);
+  position: absolute;
+  padding: 1rem;
+  top: 3rem;
+  right: 2rem;
+}
+#options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+#game > p {
+  padding: 1rem 1rem 0;
+}
+.modal-content {
+  display: flex;
+  justify-content: space-around;
+}
+/* responsiva*/
+@media (max-width: 630px) {
+  #game {
+    max-width: 300px;
+  }
+  .cont-game {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .modal-content {
+    justify-content: space-between;
+  }
+  #options {
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  #result {
+    top: 5rem;
+    right: 1rem;
+    width: 10rem;
+  }
+  .btn {
+    padding: 5px 10px;
+  }
+}

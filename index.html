@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- icone da página -->
+    <link
+      rel="shortcut icon"
+      href="./public/img/game.png"
+      type="image/x-icon"
+    />
+    <!-- estilo da página -->
+    <link
+      rel="stylesheet"
+      href="./src/css/main.css"
+    />
+    <!-- lógica do jogo -->
+    <script
+      src="./src/js/game.js"
+      defer
+    ></script>
+    <!-- Titulo da imagem -->
+    <title>Jo Ken Po</title>
+  </head>
+  <body>
+    <h1>Jo Ken Po</h1>
+    <section id="game">
+      <div class="cont-game">
+        <section id="score">
+          <h4 id="draws">Empates : 0</h4>
+          <h4 id="victory">Vitórias : 0</h4>
+          <h4 id="loss">Derrotas : 0</h4>
+        </section>
+        <!-- Adicione este modal para conter as imagens -->
+        <div class="modal-content">
+          <div
+            id="player-choice"
+            class="image-container"
+          >
+            <img
+              alt="img-modal"
+              class="choice-image"
+              src="https://wesraiuga.github.io/games/assets/img/jokenpo/jokenpo-user-pedra.png"
+            />
+          </div>
+          <div
+            id="computer-choice"
+            class="image-container"
+          >
+            <img
+              alt="img-modal"
+              class="choice-image"
+              src="https://wesraiuga.github.io/games/assets/img/jokenpo/jokenpo-user-pedra.png"
+            />
+          </div>
+        </div>
+        <!-- controlhes do jogo -->
+        <div id="options">
+          <button
+            type="button"
+            class="btn"
+            onclick="playerChoice('✊')"
+          >
+            Pedra
+          </button>
+          <button
+            type="button"
+            class="btn"
+            onclick="playerChoice('🖐️')"
+          >
+            Papel
+          </button>
+          <button
+            type="button"
+            class="btn"
+            onclick="playerChoice('✌️')"
+          >
+            Tesoura
+          </button>
+        </div>
+      </div>
+      <div id="result"></div>
+      <p>Escolha uma opção para jogar.</p>
+    </section>
+  </body>
+</html>
